@@ -13,12 +13,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-        continue-on-error: true
-
-      - name: Setup Gradle
+      - name: Setup Gradle 8.5
         uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5' # Фиксируем рабочую версию здесь
 
       - name: Build APK
         run: gradle assembleDebug
