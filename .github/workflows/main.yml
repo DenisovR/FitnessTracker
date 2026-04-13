@@ -25,3 +25,4 @@ jobs:
         with:
           name: my-fitness-app
           path: app/build/outputs/apk/debug/*.apk
+
